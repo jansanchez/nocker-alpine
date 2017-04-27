@@ -1,4 +1,17 @@
-# How to use
+# **nocker-alpine**
+
+An Image for Node.js based in Debian Alpine
+
+## Run + bash (temporaly)
+```
+docker run -it --rm jansanchez/nocker-alpine bash
+```
+
+## How to use with Docker Compose (Template and Example)
+
+Example: [https://github.com/jansanchez/nocker-alpine-app](https://github.com/jansanchez/nocker-alpine-app)
+
+# **If you want your Own Build**
 
 ## Clone repository
 ```
@@ -7,26 +20,5 @@ git clone git@github.com:jansanchez/nocker-alpine.git
 
 ## Build
 ```
-docker build -t js/nocker-alpine .
+docker build -t jansanchez/nocker-alpine .
 ```
-
-## Run + sh (temporaly)
-```
-docker run -it --rm js/nocker-alpine sh
-```
-
-## How to use
-
-### I'm working in that...
-
-## Add dependency with Yarn
-```
-docker run -it --name nodejs --rm \
-  -u node \
-  -v ~/yarn_cache/:/tmp/cache/yarn/ \
-  -v app:/home/node/app/ \
-  js/nocker-alpine yarn add css-url-versioner
-```
-
-This image of Alpine Linux don't contain bash use sh, ash, /bin/sh or /bin/ash instead
-i.e.: `docker run -it --rm image_name /bin/sh`
