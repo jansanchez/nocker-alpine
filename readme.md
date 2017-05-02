@@ -1,10 +1,10 @@
 # **nocker-alpine**
 
 An Image for Node.js based in Debian Alpine
-
+cd
 ## Run + bash (temporaly)
 ```
-docker run -it --rm jansanchez/nocker-alpine bash
+docker run -it --rm jansanchez/nocker-alpine sh
 ```
 
 ## How to use with Docker Compose (Template and Example)
