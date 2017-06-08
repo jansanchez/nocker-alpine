@@ -3,7 +3,7 @@ FROM alpine:3.4
 MAINTAINER Jan Sanchez <joejansanchez@gmail.com>
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 6.10.3
+ENV NODE_VERSION 6.11.0
 
 RUN apk add --no-cache \
         libstdc++ \
@@ -46,7 +46,7 @@ RUN apk add --no-cache \
     && rm -Rf "node-v$NODE_VERSION" \
     && rm "node-v$NODE_VERSION.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt
 
-ENV YARN_VERSION 0.23.4
+ENV YARN_VERSION 0.24.6
 
 RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg \
   && for key in \
