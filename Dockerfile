@@ -3,7 +3,7 @@ FROM alpine
 MAINTAINER Jan Sanchez <joejansanchez@gmail.com>
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 6.11.5
+ENV NODE_VERSION 8.9.0
 
 RUN apk add --no-cache \
         libstdc++ \
