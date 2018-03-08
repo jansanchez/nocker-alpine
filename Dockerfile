@@ -2,7 +2,7 @@
 FROM alpine
 MAINTAINER Jan Sanchez <joejansanchez@gmail.com>
 
-ENV NODE_VERSION 8.9.4
+ENV NODE_VERSION 8.10.0
 
 RUN apk add --no-cache \
         libstdc++ \
