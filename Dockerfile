@@ -2,7 +2,7 @@
 FROM alpine
 MAINTAINER Jan Sanchez <joejansanchez@gmail.com>
 
-ENV NODE_VERSION 8.12.0
+ENV NODE_VERSION 10.13.0
 
 RUN apk add --no-cache \
         libstdc++ \
@@ -45,7 +45,7 @@ RUN apk add --no-cache \
     && rm -Rf "node-v$NODE_VERSION" \
     && rm "node-v$NODE_VERSION.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt
 
-ENV YARN_VERSION 1.7.0
+ENV YARN_VERSION 1.12.1
 
 RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && for key in \
