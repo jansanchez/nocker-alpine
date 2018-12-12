@@ -1,5 +1,5 @@
 # Main Image
-FROM alpine
+FROM alpine:3.8
 MAINTAINER Jan Sanchez <joejansanchez@gmail.com>
 
 ENV NODE_VERSION 10.14.2
