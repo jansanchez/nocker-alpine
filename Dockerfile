@@ -1,5 +1,5 @@
 # Main Image
-FROM alpine
+FROM alpine:3.9 
 MAINTAINER Jan Sanchez <joejansanchez@gmail.com>
 
 ENV NODE_VERSION 10.15.0
@@ -20,6 +20,7 @@ RUN addgroup -g 1000 node \
         python \
   # gpg keys listed at https://github.com/nodejs/node#release-keys
   && for key in \
+    B9E2F5981AA6E0CD28160D9FF13993A75599653C \
     94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
     FD3A5288F042B6850C66B31F09FE44734EB7990E \
     71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
@@ -82,3 +83,4 @@ RUN mkdir -p $YARN_PATH \
 # i.e.: docker run -it --rm image_name /bin/sh
 
 CMD [ "node" ]
+
